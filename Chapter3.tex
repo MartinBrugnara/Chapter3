@@ -1,13 +1,23 @@
-\documentclass[11pt,a4paper,oneside,onecolumn]{IEEEtran}
+%\documentclass[11pt,a4paper,twoside,onecolumn]{IEEEtran} % -> 8 pages
+
+% Play around with page size to fit 10-12 pages constraint
+\documentclass[11pt,oneside,onecolumn]{report}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+% more reasonable settings.. But he wants 10-12 pages..
+%\documentclass[12pt,a4paper,twoside,onecolumn]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[american]{babel}
 \usepackage{url} % bib url refs
-\usepackage{booktabs}
+\usepackage{booktabs} % table style
+\usepackage{graphics} % resize table
 % \usepackage{flushend} % (twocolumn only) terminate last column equally.
 
 \begin{document}
 %NOTE: include adds a \clearpage before and after the content.
 
+\setcounter{chapter}{2}
+\chapter{An ``In-Side environment and I\&E''}
 \input{sections/Pier.tex}
 \input{sections/Martin.tex}
 \input{sections/Gian.tex}
@@ -16,8 +26,8 @@
 \input{sections/Giacomo.tex}
 \input{sections/Gianluca.tex}
 
-\bibliographystyle{acm}
-%\bibliographystyle{apalike}
+%\bibliographystyle{acm}
+\bibliographystyle{apalike}
 \bibliography{bibliography}
 
 \end{document}
